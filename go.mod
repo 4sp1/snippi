@@ -1,3 +1,3 @@
-module github.com/4sp1/snippipe
+module github.com/4sp1/snippi
 
 go 1.25.4

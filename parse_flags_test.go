@@ -5,7 +5,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/4sp1/snippipe/internal/template"
+	"github.com/4sp1/snippi/internal/template"
 )
 
 type expectedParseFlags struct {

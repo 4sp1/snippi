@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/4sp1/snippipe/internal/template"
+	"github.com/4sp1/snippi/internal/template"
 )
 
 func main() {
@@ -88,6 +88,6 @@ const (
 func usage() {
 	fmt.Println(`
 Usage:
-	snippipe -template some.gotmpl [-varname value]... 
+	snippi -template some.gotmpl [-varname value]... 
 	`)
 }

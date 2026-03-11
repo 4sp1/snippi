@@ -1,5 +1,5 @@
-snippipe
-========
+snippi
+======
 
 - [Supported editors](#supported-editors)
 - [Templates](#templates)
@@ -9,17 +9,17 @@ snippipe
 - [Extensibility](#extensibility)
 - [Benefits and outcomes](#benefits-and-outcomes)
 
-snippipe is a pure‑Go, single‑binary snippet generator that lets Vim, Neovim,
+snippi is a pure‑Go, single‑binary snippet generator that lets Vim, Neovim,
 and Helix users produce editor‑agnostic snippets on‑the‑fly using Go templates.
 
-By piping code through `snippipe`, developers eliminate manual
+By piping code through `snippi`, developers eliminate manual
 copy‑paste and keep a single source of truth for all their editor snippets.
 
 TLDR;
 
 - Generates macros from any Go `text/template` file, substituting variables at runtime.  
 - Zero‑runtime footprint: a compiled binary with no external dependencies or CGO.  
-- Simple CLI workflow – pipe to `snippipe -template my.tmpl`.  
+- Simple CLI workflow – pipe to `snippi -template my.tmpl`.  
 - Works anywhere a shell can pipe output, so it integrates instantly with Helix,
   Vim, and Neovim via a one‑line key‑binding.
 
@@ -38,7 +38,7 @@ via pipe‑style commands.
 Any editor that can launch an external process can be integrated
 with minimal configuration.
 
-`snippipe` removes the need to maintain separate snippet files for each editor
+`snippi` removes the need to maintain separate snippet files for each editor
 and eliminates the repetitive copy‑paste of boiler‑plate code.
 
 Templates
@@ -56,7 +56,7 @@ Hello {{.Stdin}}!
 Running the command
 
 ```sh
-echo world | snippipe -template this.go.tmpl
+echo world | snippi -template this.go.tmpl
 ```
 
 will write `Hello world!` to standard output.
@@ -72,17 +72,17 @@ requirements, resulting in a tiny footprint on Linux, macOS and Windows.
 Editor integration
 ------------------
 
-Use it in a pipe, e.g. `echo bar | snippipe -template foo.tmpl`,
+Use it in a pipe, e.g. `echo bar | snippi -template foo.tmpl`,
 or bind it to a key in Helix or Vim:
 ```toml
-[keys.normal."+"] m = '@|snippipe -template some.go.tmpl'
+[keys.normal."+"] m = '@|snippi -template some.go.tmpl'
 ```
 
 Extensibility
 -------------
 
 Users can place custom template files anywhere on disk and reference them with
-`-template`; snippipe does not enforce a template manager, keeping the tool
+`-template`; snippi does not enforce a template manager, keeping the tool
 minimal and flexible.
 
 Benefits and outcomes
@@ -91,7 +91,7 @@ Benefits and outcomes
 Instant snippet generation with compiled‑binary performance, sandboxed security
 (no network or external dependencies), and a unified workflow across editors.
 
-`go install github.com/4sp1/snippipe@latest` builds the binary for any `GOOS/GOARCH` target.
+`go install github.com/4sp1/snippi@latest` builds the binary for any `GOOS/GOARCH` target.
 
 Roadmap
 -------
@@ -101,4 +101,4 @@ Roadmap
 License
 -------
 
-MIT‑licensed; source code and issue tracker at https://github.com/4sp1/snippipe.
+MIT‑licensed; source code and issue tracker at https://github.com/4sp1/snippi.
