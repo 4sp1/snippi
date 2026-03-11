@@ -1,0 +1,23 @@
+rephrase commit message keep style and action verbs
+commit header epxected under 50 chars
+rephrase such that commit message explains the reason why changes were comitted 
+sentences starts with action verbs as if saying "this commit [verb]"
+but do not write "this commit" only verb at third person for example
+"this commit includes..." -> "Includes..."
+draft to rephrase is enclosed in <draft>...</draft> tags
+
+<draft>
+{{.Stdin}}
+</draft>
+
+for the header message ask yourself
+**What kind of change is it?** Pick the most appropriate type:
+   - **feat** – new feature / user-visible functionality
+   - **fix** – bug correction / regression fix
+   - **docs** – documentation only
+   - **style** – formatting, whitespace, lint fixes (no code change)
+   - **refactor** – internal restructuring, no functional change
+   - **perf** – performance improvement
+   - **test** – adding/changing tests only
+   - **chore** – build, CI, tooling, or other maintenance
+Write a commit header ≤50 chars using “change(context): summary”.
